@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,20 +14,200 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.head_bg {
+  background-image: url(/head_bg.webp);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+.bg_1 {
+  background-image: url(/bg_1.webp);
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+.bg_2 {
+  background-image: url(/bg_2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #0e672d;
+}
+
+.bg_3 {
+  background-image: url(/bg_3.webp);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+.bg_3::after,
+.about_bg_2::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(/shadow.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  z-index: 9;
+}
+
+.line {
+  background-image: url(/line.webp);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+.pay_bg_1 {
+  background-image: url(/pay_bg_1.webp);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+.pay_bg_2 {
+  background-image: url(/pay_bg_2.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #137937;
+}
+
+.wall_bg {
+  background-image: url(/wall_bg.jpg);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.about_bg_1 {
+  background-color: #1d1a17;
+}
+
+.about_bg_1::before,
+.about_bg_1::after {
+  content: " ";
+  width: 200px;
+  position: absolute;
+  height: 100%;
+  background-image: url(/zhu.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+}
+
+.about_bg_1::after {
+  right: 0;
+  transform: rotateY(180deg);
+}
+
+.book_wrap::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  top: -188px;
+  background-image: url(/light.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media not all and (min-width: 768px) {
+  .book_wrap::before {
+    top: -400px;
+  }
+}
+
+.nft_bg_1 {
+  background-color: #201d19;
+}
+
+.nft_bg_1::before,
+.nft_bg_1::after {
+  content: " ";
+  width: 200px;
+  position: absolute;
+  height: 100%;
+  background-image: url(/bu.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  z-index: 0;
+}
+
+.nft_bg_1::after {
+  right: 0;
+  transform: rotateY(180deg);
+}
+
+.about_bg_2 {
+  background-image: url(/about_bg_2.webp);
+  background-position: top;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+.pay_bg_3 {
+  background-image: url(/pay_bg_3.jpg);
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+.bg_5 {
+  background-image: url(/bg_5.png);
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
+.menu_bg {
+  background-image: url(/menu_bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.foot_bg {
+  background-image: url(/foot_bg.jpg);
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+.swiper-pre,
+.swiper-next {
+  position: absolute;
+  width: 31px;
+  height: 47px;
+  background-image: url(/arrow.png);
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.swiper-pre {
+  left: -45px;
+}
+
+.swiper-next {
+  right: -45px;
+  transform: translateY(-50%) rotateY(-180deg);
 }
