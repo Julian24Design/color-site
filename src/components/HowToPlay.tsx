@@ -51,6 +51,7 @@ const HowToPlay = () => {
                 alt=""
                 className="w-[300px] inline-block max-md:w-[200px]"
                 quality={100}
+                unoptimized
               />
               <div className="mt-4">
                 Step 2: Check the colorpepe
