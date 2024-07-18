@@ -211,3 +211,53 @@ body {
   right: -45px;
   transform: translateY(-50%) rotateY(-180deg);
 }
+
+.animationClass {
+  animation: 2s ease 0s forwards bounce;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-100%);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateY(-92px);
+    animation-timing-function: ease-in;
+  }
+
+  62% {
+    transform: translateY(-66px);
+    animation-timing-function: ease-in;
+  }
+
+  82% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+
+  /* 92% {
+    transform: translateY(-34px);
+    animation-timing-function: ease-in;
+  } */
+
+  25%,
+  55%,
+  75%,
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}

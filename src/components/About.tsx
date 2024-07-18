@@ -5,6 +5,8 @@ import { Autoplay, EffectFade } from "swiper/modules";
 
 import "swiper/css/effect-fade";
 import Link from "next/link";
+import { useRef, useState } from "react";
+import { useRafInterval } from "ahooks";
 
 const About = () => {
   return (
@@ -63,7 +65,7 @@ const About = () => {
               </div>
               <div className=" relative top-[130px] max-md:absolute max-md:right-[20px] flex-shrink-0 max-[414px]:top-[100px]">
                 <img src="/nft_box.png" alt="" className="h-[600px] max-md:h-[350px] max-[414px]:h-[320px]" />
-                <div className=" absolute w-[calc(100%_-_22%)] h-[calc(100%_-_14%)] top-[7%] left-[11%] ">
+                <div className=" absolute w-[calc(100%_-_22%)] h-[calc(100%_-_14%)] top-[7%] left-[11%] overflow-hidden">
                   <SwiperComponent />
                 </div>
               </div>
@@ -91,21 +93,36 @@ const NFTS = [
 ];
 
 const SwiperComponent = () => {
+  const [currentNFT, setCurrentNFT] = useState<number>(0);
+  //第一轮
+  const round = useRef<number>(0);
+
+  useRafInterval(() => {
+    setCurrentNFT((pre) => {
+      if (pre >= NFTS.length - 1) {
+        round.current = round.current + 1;
+        return 0;
+      }
+      return pre + 1;
+    });
+  }, 2010);
+
   return (
-    <Swiper
-      loop
-      autoplay={{
-        delay: 2500,
-      }}
-      modules={[Autoplay, EffectFade]}
-      slidesPerView={1}
-      effect={"fade"}
-    >
-      {NFTS.map((src) => (
-        <SwiperSlide key={src}>
-          <Image src={src} alt="colorpepe" width={225} height={225} className="w-full object-cover" />
-        </SwiperSlide>
+    <div className=" w-full h-full">
+      {NFTS.map((src, index) => (
+        <Image
+          key={index}
+          src={src}
+          alt="colorpepe"
+          width={0}
+          height={0}
+          className={`w-full object-cover absolute ${
+            index === currentNFT || index === currentNFT - 1 ? "animationClass" : ""
+          }`}
+          style={{ zIndex: index + round.current + NFTS.length, transform: `translateY(-100%)` }}
+          unoptimized
+        />
       ))}
-    </Swiper>
+    </div>
   );
 };
