@@ -78,7 +78,7 @@ const NFT = () => {
             alt=""
             width={0}
             height={0}
-            className=" absolute w-[100px] top-[92%] left-[14%] hover:scale-105 transition-transform cursor-pointer"
+            className=" absolute w-[100px] top-[84%] left-[54%] hover:scale-105 transition-transform cursor-pointer"
             unoptimized
             onClick={() => (window.location.href = "https://opensea.io/collection/colorpepe-bc404")}
           />
