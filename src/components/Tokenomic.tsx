@@ -6,9 +6,10 @@ const Tokenomic = () => {
       <div className="bg_5 w-full h-[600px] font-semibold">
         <div className=" font-linkfree text-white text-7xl text-center pt-8 max-md:text-6xl">Tokenomic</div>
         <div className="flex justify-center mt-8">
-          <div className="font-linkfree text-white text-4xl max-[1000px]:px-[20px] max-[1000px]:text-center">
-            100% converted from native asset SPEPE and supported revert at anytime Fair launch ,<br /> no more bullshit.
-            keep it simple and CTO!
+          <div className="font-linkfree text-white text-4xl max-[1000px]:px-[20px] max-[1000px]:text-center leading-[50px]">
+            Converted from native asset $PEPE and supported revert at anytime Fair launch.
+            <br />
+            No more bullshit. Keep it simple and CTO!
           </div>
         </div>
         <Image

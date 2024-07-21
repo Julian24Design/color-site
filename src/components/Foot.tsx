@@ -13,8 +13,7 @@ const Foot = () => {
         />
         <div className=" font-linkfree text-white text-4xl max-sm:px-[20px] max-sm:text-center font-semibold">
           <div>
-            $ Colorpepe is powered by ColorProtocol, has no <br />
-            cooperation with $ PEPE and Matt Furie.
+            $ Colorpepe is supported by ColorProtocol to <br /> convert PEPE into ColorPEPE NFTs and tokens.
           </div>
           <div className="mt-20 max-sm:mt-10">
             Just the same as $ pepe. $Colorpepe is a meme

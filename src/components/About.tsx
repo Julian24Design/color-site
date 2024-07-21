@@ -63,11 +63,12 @@ const About = () => {
                   </Link>
                 </div>
               </div>
-              <div className=" relative top-[130px] max-md:absolute max-md:right-[20px] flex-shrink-0 max-[414px]:top-[100px]">
-                <img src="/nft_box.png" alt="" className="h-[600px] max-md:h-[350px] max-[414px]:h-[320px]" />
+              <div className="relative top-[300px] max-md:hidden">
+                <Image src="/object_3.png" alt="colorpepe" width={0} height={0} className="w-[500px]" unoptimized />
+                {/* <img src="/nft_box.png" alt="" className="h-[600px] max-md:h-[350px] max-[414px]:h-[320px]" />
                 <div className=" absolute w-[calc(100%_-_22%)] h-[calc(100%_-_14%)] top-[7%] left-[11%] overflow-hidden">
                   <SwiperComponent />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

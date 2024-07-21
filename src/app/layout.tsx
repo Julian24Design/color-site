@@ -6,7 +6,7 @@ import { linkfree } from "@/ui/fonts";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Colorpee",
+  title: "Colorpepe",
   description: "",
   icons: {
     icon: [{ url: "/favicon.png" }],

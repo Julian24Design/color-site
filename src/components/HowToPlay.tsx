@@ -62,11 +62,11 @@ const HowToPlay = () => {
         </div>
       </div>
       <div className="wall_bg w-full h-[90px]"></div>
-      <div className="pay_bg_3 w-full h-[300px] max-sm:h-[400px] max-sm:px-[10px]">
+      <div className="pay_bg_3 w-full h-[300px] max-sm:h-[400px] max-sm:px-[20px]">
         <div className="flex justify-center items-center relative top-1/2 -translate-y-1/2">
           <div className=" font-linkfree text-white font-semibold text-[48px] flex items-center gap-[100px] max-[1000px]:text-[36px] max-[1000px]:gap-[20px] max-md:flex-col">
             <div className="max-sm:leading-10">
-              How much $ Coloepepe can NFT ?<br /> Actually it is complex… but it is an impressive design…
+              How much $Colorpepe can get one NFT ? <br /> Actually it is complex… but it is an impressive design…
               <br /> maybe you can check the rules here.
             </div>
             <button
