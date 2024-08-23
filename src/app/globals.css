@@ -58,7 +58,7 @@ body {
 
 .bg_3::after,
 .about_bg_2::after {
-  content: " ";
+  content: ' ';
   position: absolute;
   width: 100%;
   height: 100%;
@@ -103,7 +103,7 @@ body {
 
 .about_bg_1::before,
 .about_bg_1::after {
-  content: " ";
+  content: ' ';
   width: 200px;
   position: absolute;
   height: 100%;
@@ -120,7 +120,7 @@ body {
 }
 
 .book_wrap::before {
-  content: " ";
+  content: ' ';
   position: absolute;
   width: 100%;
   height: 800px;
@@ -142,7 +142,7 @@ body {
 
 .nft_bg_1::before,
 .nft_bg_1::after {
-  content: " ";
+  content: ' ';
   width: 200px;
   position: absolute;
   height: 100%;
@@ -261,4 +261,8 @@ body {
     animation-timing-function: ease-out;
     opacity: 1;
   }
+}
+
+.tooltip:before {
+  @apply rounded-xl bg-neutral-800 px-3 py-2 text-xl text-white/70;
 }
